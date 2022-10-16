@@ -3,7 +3,7 @@ package War;
 import java.util.ArrayList;
 
 public class Player {
-	public ArrayList<Card> hand;
+	private ArrayList<Card> hand;
 	private int score;
 	private String name;
 	
@@ -14,6 +14,7 @@ public class Player {
 	}
 	public void describe() {
 		System.out.println(name);
+		System.out.println(hand.size());
 		for (Card card : hand) {
 			System.out.println(card.describe());
 		}
@@ -33,5 +34,8 @@ public class Player {
 	}
 	public void incrementScore() {
 		this.score ++;
+	}
+	public String getName() {
+		return name;
 	}
 }
